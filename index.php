@@ -133,8 +133,6 @@ $app->post("/upload-file", function() use($app, $db){
 
     
     if (isset($_FILES['uploads'])) {
-        echo 'el fichero existe';
-
         $piramideUploader = new PiramideUploader();
         $upload = $piramideUploader->upload('image',"uploads", "uploads", array('image/jpeg','image/jpg','image/png','image/gif'));
         $file = $piramideUploader->getInfoFile();
